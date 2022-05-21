@@ -3,8 +3,13 @@
 @use 'components' as *;
 
 .main {
-    background-color: $primary;
+    background-color: #d63384;
     width: 100%;
     height: 100vh;
-    @include flexRow;
+    display: flex;
+}
+.fleaaas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

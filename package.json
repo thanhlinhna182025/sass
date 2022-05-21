@@ -4,8 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass --output-style=expanded --source-map=true scss/main.scss dist/css/main.css",
+    "prefix": "npm run build:sass && postcss dist/css/main.css --use=autoprefixer --output=dist/css/main.css",
+    "start": "onchange \"scss/**/*.scss\" -- npm run prefix"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "node-sass": "^7.0.1",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
