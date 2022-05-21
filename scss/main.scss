@@ -1,0 +1,10 @@
+@use './abstracts' as *;
+@use './bases' as *;
+@use 'components' as *;
+
+.main {
+    background-color: $primary;
+    width: 100%;
+    height: 100vh;
+    @include flexRow;
+}

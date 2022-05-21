@@ -1,0 +1,48 @@
+$primary: #0d6efd;
+$secondary: #6c757d;
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$white: #fff;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    'bold': 700,
+);
+$back-ground: (
+    'default': '$white',
+    'primary': $primary,
+    'secondary': $secondary,
+);
+$font-size: (
+    'default': 1.6rem,
+    'small': 1.2rem,
+    'medium': '3rem',
+    'large': 4rem,
+    'extra': 5rem,
+);
+@function fontSize($fontWeight-name) {
+    @return map-get($font-weights, $fontWeight-name);
+}
+@function fontSize($bakground-name) {
+    @return map-get($back-ground, $bakground-name);
+}
+@function fontSize($fontSize-name) {
+    @return map-get($font-size, $fontSize-name);
+}
